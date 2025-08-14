@@ -1,4 +1,4 @@
-# 🚗 Driver Drowsiness Detection (PyTorch + GPU)  
+# 📈 Driver Drowsiness Detection (PyTorch + GPU)  
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)  
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C)](https://pytorch.org/)  
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.6.0-green)](https://opencv.org/)  
@@ -40,23 +40,6 @@ Driver_Drowsiness_Detection/
 └── .gitignore                 # Ignored files/folders
 ```
 
----
-
-## 📈 Workflow
-
-```mermaid
-flowchart LR
-    A[Webcam Input] --> B[Face & Eye Detection (Haar Cascades)]
-    B --> C[PyTorch Model: Eye State Classification]
-    C --> D{Eyes Closed?}
-    D -- Yes --> E[Drowsiness Counter Increments]
-    E --> F{Threshold Reached?}
-    F -- Yes --> G[Trigger Alarm 🔊]
-    D -- No --> H[Reset Counter]
-```
-
----
-
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
@@ -69,7 +52,7 @@ cd Driver_Drowsiness_Detection
 **Windows**
 ```bash
 python -m venv env
-.\env\Scriptsctivate
+.\env\Scripts\activate
 ```
 **macOS / Linux**
 ```bash
@@ -88,6 +71,15 @@ For **CPU**:
 pip install torch torchvision torchaudio
 pip install opencv-python==4.6.0.66 numpy==1.23.0 pygame==2.4.0
 ```
+
+### 4️⃣ Train the Model
+```bash
+python model.py
+```
+- Loads and preprocesses the dataset.
+- Trains the CNN model for driver drowsiness detection.
+
+---
 
 ### 4️⃣ Run the Application
 ```bash
@@ -134,13 +126,12 @@ FRAME_HEIGHT = 480
 
 ## 🎯 Advanced Usage
 
-### Train the Model
+### Automatic Project Setup
 ```bash
 python setup.py
 ```
-- Loads dataset from `dataset_new/`
-- Trains the PyTorch model
-- Saves `.pth` in `models/`
+- Creates a virtual environment.
+- Installs all defined dependencies from the setup.py file.
 
 ### Test the Model
 ```bash
@@ -167,8 +158,3 @@ Displays model predictions for sample test images.
 - `.gitignore` ensures datasets, models, and other large files are not pushed to GitHub.
 
 ---
-
-## 🚀 Future Enhancements
-- Integrate **facial landmark detection** for higher accuracy.
-- Deploy to **embedded devices** (Jetson Nano, Raspberry Pi).
-- Add **mobile app integration** for alerts.
