@@ -1,0 +1,45 @@
+env/
+docs/docs.pdf
+# Ignore model files
+models/
+
+# Ignore dataset
+dataset_new/
+
+# Ignore Haar cascade files (if you don’t want them on GitHub)
+haar_cascade_files/
+
+!training_loss_graph.png
+!training_accuracy_graph.png
+
+# Ignore audio and media files
+*.wav
+*.mp3
+# *.png
+*.jpg
+*.jpeg
+
+# Ignore Python cache & compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore logs and results
+*.log
+training_log.txt
+training_results.json
+
+# Temporary and backup files
+*.tmp
+*.bak
+backup_code.py
+
+# IDE & OS specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignore 4.65.0 file/folder
+4.65.0
