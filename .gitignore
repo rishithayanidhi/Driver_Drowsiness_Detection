@@ -1,23 +1,23 @@
 env/
 docs/docs.pdf
 # Ignore model files
-models/
+# models/
 
 # Ignore dataset
-dataset_new/
+# dataset_new/
 
-# Ignore Haar cascade files (if you don’t want them on GitHub)
+# # Ignore Haar cascade files (if you don’t want them on GitHub)
 haar_cascade_files/
 
 !training_loss_graph.png
 !training_accuracy_graph.png
 
 # Ignore audio and media files
-*.wav
-*.mp3
+# *.wav
+# *.mp3
 # *.png
-*.jpg
-*.jpeg
+# *.jpg
+# *.jpeg
 
 # Ignore Python cache & compiled files
 __pycache__/
@@ -33,7 +33,6 @@ training_results.json
 # Temporary and backup files
 *.tmp
 *.bak
-backup_code.py
 
 # IDE & OS specific files
 .vscode/
